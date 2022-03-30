@@ -9,6 +9,6 @@ for i in soup:
 
 for j in sorted(a):
     print(j)
-print("GIT")
+print("GIT,nhvjhb")
 print("KOLIA")
 
