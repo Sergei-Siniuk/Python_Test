@@ -12,5 +12,5 @@ for j in sorted(a):
 print("GIT")
 print("KOLIA")
 print("Добавил на компике")
-print("Добавил на гитхабе")
+
 
