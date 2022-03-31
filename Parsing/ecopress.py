@@ -1,5 +1,4 @@
 import requests
-import json
 from bs4 import BeautifulSoup
 
 # url = "http://www.ecopress.by/ru/page/60.html"
@@ -13,9 +12,24 @@ from bs4 import BeautifulSoup
 with open("index.html", "r", encoding="utf-8-sig") as file:
     a=file.read()
 soup=BeautifulSoup(a,"lxml")
-# best_kurs_list=[]
-# for i in soup.findAll("th",class_="best"):
-#     best_kurs_list.append(i.text)
-# print(best_kurs_list)
+
+best_kurs_list=[]
+for i in soup.findAll("th",class_="best"):
+    best_kurs_list.append(i.text)
+
+
 table= soup.find("table",class_="nal")
-print(table)
+# print(table)
+vall_list=[]
+vall=soup.findAll("th",colspan="2")
+for i in vall:
+    vall_list.append(i.text)
+    vall_list.append(i.text)
+
+punkt=soup.findAll("th",valign="top")
+punkt_list=[]
+for i in punkt:
+    punkt_list.append(i.text)
+
+for v,j,p in zip(vall_list,best_kurs_list,punkt_list):
+    print(v,j,p)
