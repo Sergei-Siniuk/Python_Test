@@ -9,9 +9,7 @@ for i in soup:
 
 for j in sorted(a):
     print(j)
-print("GIT")
-print("KOLIA")
-print("Добавил на компике,проверка десктоп приложения")
+
 
 
 

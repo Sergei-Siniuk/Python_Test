@@ -13,8 +13,9 @@ from bs4 import BeautifulSoup
 with open("index.html", "r", encoding="utf-8-sig") as file:
     a=file.read()
 soup=BeautifulSoup(a,"lxml")
-# print(soup)
-best_kurs_list=[]
-for i in soup.findAll("th",class_="best"):
-    best_kurs_list.append(i.text)
-print(best_kurs_list)
+# best_kurs_list=[]
+# for i in soup.findAll("th",class_="best"):
+#     best_kurs_list.append(i.text)
+# print(best_kurs_list)
+table= soup.find("table",class_="nal")
+print(table)
